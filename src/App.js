@@ -11,20 +11,23 @@ const App = () => {
   let calcbmi = (e) => {
     e.preventDefault();
     if(weight === 0 || height === 0){
-      alert("Please Enter a Valid Weight and Height");
+      alert("Invalid Input");
     }
     else{
-      let bmi = (weight/(height*height))
-      setbmi(bmi.toFixed(1));
+      let bmi = (weight/(height/100)**2)
+      setbmi(bmi.toFixed(2));
 
       if(bmi < 18.5){
         setmessage('You are underweight');
       }
-      else if(bmi>=18.5 && bmi < 25){
+      else if(bmi>=18.5 && bmi <= 24.9){
         setmessage('You are healthy weight');
       }
-      else{
+      else if(bmi>=25 && bmi <= 29.9){
         setmessage('You are overweight');
+      }
+      else{
+        setmessage('You are obese');
       }
     }
   }
@@ -47,7 +50,7 @@ const App = () => {
             ></input>
           </div>
           <div>
-            <label>Height (m)</label><br></br>
+            <label>Height (cm)</label><br></br>
             <input
               type="text"
               placeholder="Enter Height"
@@ -65,7 +68,7 @@ const App = () => {
             </button>
           </div>
           <div className="center">
-            <h3>Your BMI is: {bmi} kg/m<sup>2</sup></h3>
+            <h3>Your BMI is: {bmi}</h3>
             <p>{message}</p>
           </div>
         </form>
