@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
+
 const App = () => {
 
   const [weight,setweight] = useState(0);
@@ -31,6 +32,24 @@ const App = () => {
       }
     }
   }
+
+  let imgsrc;
+  if(bmi<1){
+    imgsrc=null;
+  }
+  else if(bmi<18.5){
+    imgsrc=require('./images/underweightimg.jpg')
+  }
+  else if(bmi>=18.5 && bmi <= 24.9){
+    imgsrc=require('./images/healthyweight.jpg')
+  }
+  else if(bmi>=25 && bmi <= 29.9){
+    imgsrc=require('./images/overweight.avif')
+  }
+  else {
+    imgsrc=require('./images/obsese.avif')
+  }
+
 
   let reload = () => {
     window.location.reload();
@@ -70,6 +89,9 @@ const App = () => {
           <div className="center">
             <h3>Your BMI is: {bmi}</h3>
             <p>{message}</p>
+          </div>
+          <div className="img-container">
+          <img src={imgsrc} alt=""></img>
           </div>
         </form>
       </div>
