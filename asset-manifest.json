@@ -1,13 +1,17 @@
 {
   "files": {
     "main.css": "/React_BMI_Calc/static/css/main.178f9c64.css",
-    "main.js": "/React_BMI_Calc/static/js/main.ff287d92.js",
+    "main.js": "/React_BMI_Calc/static/js/main.2ef69891.js",
+    "static/media/obsese.avif": "/React_BMI_Calc/static/media/obsese.f061cfafc479e476d531.avif",
+    "static/media/healthyweight.jpg": "/React_BMI_Calc/static/media/healthyweight.f78868e66f4ea2198f32.jpg",
+    "static/media/underweightimg.jpg": "/React_BMI_Calc/static/media/underweightimg.725e2f7b1d89688bdcf5.jpg",
+    "static/media/overweight.avif": "/React_BMI_Calc/static/media/overweight.e89c962ef2875ddcb86b.avif",
     "index.html": "/React_BMI_Calc/index.html",
     "main.178f9c64.css.map": "/React_BMI_Calc/static/css/main.178f9c64.css.map",
-    "main.ff287d92.js.map": "/React_BMI_Calc/static/js/main.ff287d92.js.map"
+    "main.2ef69891.js.map": "/React_BMI_Calc/static/js/main.2ef69891.js.map"
   },
   "entrypoints": [
     "static/css/main.178f9c64.css",
-    "static/js/main.ff287d92.js"
+    "static/js/main.2ef69891.js"
   ]
 }
